@@ -1,0 +1,9 @@
+# api-client:request
+version: 1
+id: 1770661148582-3o4wor5s0
+name: ww
+method: GET
+url: test
+headers: []
+queryParams: []
+bodyType: json

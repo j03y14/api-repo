@@ -1,0 +1,13 @@
+# api-client:request
+version: 1
+id: 1770661212930-s0ki5y6nm
+name: na
+method: POST
+url: tee
+headers: []
+queryParams: []
+body: |-
+  {
+    "name":"john"
+  }
+bodyType: json
