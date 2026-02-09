@@ -1,0 +1,12 @@
+# api-client:request
+version: 1
+id: 1770644594297-15ksyzja5
+name: New Request
+method: GET
+url: '{{name}}'
+headers: []
+queryParams:
+  - key: name
+    value: '{{new}}'
+    enabled: true
+bodyType: json
