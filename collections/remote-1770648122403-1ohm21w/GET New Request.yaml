@@ -1,12 +1,9 @@
 # api-client:request
 version: 1
-id: 1770648128010-a9qaiet1h
+id: 1770661006112-bahlb40q1
 name: New Request
 method: GET
-url: naver.com
+url: daum.net
 headers: []
-queryParams:
-  - key: name
-    value: name233
-    enabled: true
+queryParams: []
 bodyType: json
