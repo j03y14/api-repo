@@ -5,5 +5,8 @@ name: New Request
 method: GET
 url: naver.com
 headers: []
-queryParams: []
+queryParams:
+  - key: name
+    value: name233
+    enabled: true
 bodyType: json
