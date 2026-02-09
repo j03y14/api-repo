@@ -1,0 +1,9 @@
+# api-client:request
+version: 1
+id: 1770609757158-9vz3fpr08
+name: New Request
+method: GET
+url: www.naver.com
+headers: []
+queryParams: []
+bodyType: json
