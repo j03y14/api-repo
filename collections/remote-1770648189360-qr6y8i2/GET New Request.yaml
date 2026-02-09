@@ -1,0 +1,9 @@
+# api-client:request
+version: 1
+id: 1770648246585-vd8v134yi
+name: New Request
+method: GET
+url: daum.net
+headers: []
+queryParams: []
+bodyType: json
