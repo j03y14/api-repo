@@ -3,10 +3,10 @@ version: 1
 id: 1770648128010-a9qaiet1h
 name: New Request2
 method: GET
-url: naver.com
+url: www.naver.com
 headers: []
 queryParams:
   - key: name
     value: name233
-    enabled: true
+    enabled: false
 bodyType: json

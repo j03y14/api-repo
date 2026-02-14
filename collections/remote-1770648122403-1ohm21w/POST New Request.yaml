@@ -1,0 +1,80 @@
+# api-client:request
+version: 1
+id: 1770912048767-q09t4sp9e
+name: New Request
+method: POST
+url: https://hermes-hotel-svc-api.naver.com/graphql
+headers:
+  - key: accept
+    value: '*/*'
+    enabled: true
+  - key: accept-language
+    value: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+    enabled: true
+  - key: content-type
+    value: application/json
+    enabled: true
+  - key: hotel-referer
+    value: https://hotels.naver.com/KR1000073/hotels?size=14&sort=POPULAR_DESC&checkIn=2026-02-13&checkOut=2026-02-14&includeTax=true&realTimeRateFilter=%5Bobject+Object%5D&filters=%5Bobject+Object%5D
+    enabled: true
+  - key: origin
+    value: https://hotels.naver.com
+    enabled: true
+  - key: priority
+    value: u=1, i
+    enabled: true
+  - key: referer
+    value: https://hotels.naver.com/KR1000073/hotels?rateTab=&checkIn=2026-02-13&checkOut=2026-02-14&adultCnt=2&childAges=&dChildAges=
+    enabled: true
+  - key: sec-ch-ua
+    value: '"Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"'
+    enabled: true
+  - key: sec-ch-ua-mobile
+    value: '?0'
+    enabled: true
+  - key: sec-ch-ua-platform
+    value: '"macOS"'
+    enabled: true
+  - key: sec-fetch-dest
+    value: empty
+    enabled: true
+  - key: sec-fetch-mode
+    value: cors
+    enabled: true
+  - key: sec-fetch-site
+    value: same-site
+    enabled: true
+  - key: user-agent
+    value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+    enabled: true
+queryParams: []
+body: |-
+  {
+    "operationName": "hotelList",
+    "variables": {
+      "from": 0,
+      "size": 14,
+      "sort": "POPULAR_DESC",
+      "checkIn": "2026-02-13",
+      "checkOut": "2026-02-14",
+      "includeTax": true,
+      "realTimeRateFilter": {
+        "adultCnt": 2,
+        "checkIn": "2026-02-13",
+        "checkOut": "2026-02-14",
+        "childAges": []
+      },
+      "filters": {
+        "facilityGroupIds": [],
+        "onlyCertStarRating": false,
+        "starRatings": [],
+        "propertyTypes": [],
+        "chainIds": []
+      },
+      "nPlaceId": "KR1000073",
+      "query": "KR1000073",
+      "impArea": "renewalMulti"
+    },
+    "query": "query hotelList($from: Int!, $impArea: MultiImpArea!, $size: Int!, $sort: HotelSortOrder!, $nPlaceId: String, $realTimeRateFilter: RealTimeRateFilter, $toBeExcluded: [String!], $filters: HotelFilters, $bboxCoordinates: MultiHotelBBoxCoordinate, $query: String!, $checkIn: String!, $checkOut: String!, $includeTax: Boolean!) {\n  hotelList(\n    from: $from\n    impArea: $impArea\n    size: $size\n    sort: $sort\n    nPlaceId: $nPlaceId\n    realTimeRateFilter: $realTimeRateFilter\n    toBeExcluded: $toBeExcluded\n    filters: $filters\n    bboxCoordinates: $bboxCoordinates\n  ) {\n    hotelSummary {\n      propertyTypes {\n        hotelCount\n        name\n        id\n      }\n      facilities {\n        hotelCount\n        name\n        id\n      }\n      starRatings {\n        value\n        key\n      }\n      chains {\n        hotelCount\n        name\n        id\n      }\n      guestRatings {\n        value\n        key\n      }\n      highestTotalRate\n      lowestTotalRate\n      totalAvailableResults\n      totalFilteredResults\n      postFilterLowestTotalRate\n    }\n    destination {\n      destinationName\n      destinationType\n      isDomestic\n      latitude\n      longitude\n      nPlaceId\n      isPoi\n      nearByPlaces {\n        destinationName\n        destinationType\n        isDomestic\n        latitude\n        longitude\n        nPlaceId\n        isPoi\n      }\n    }\n    itemCount\n    itemList {\n      analyticsTags\n      certification {\n        starRatingDate\n        starRatingType\n      }\n      guestRating\n      imageUrls\n      isDomestic\n      isHotelPkg\n      isNewlyOpened\n      openedYear\n      latitude\n      longitude\n      lowestRate\n      nHotelId\n      reviewQuotes\n      starRating\n      taAwards {\n        type\n        year\n      }\n      title\n      navigationUrl\n      streetViewUrl\n      phoneNumber\n      freeCancelDeadline(\n        from: $from\n        impArea: $impArea\n        size: $size\n        sort: $sort\n        nPlaceId: $nPlaceId\n        realTimeRateFilter: $realTimeRateFilter\n      )\n      totalRateCnt(\n        from: $from\n        impArea: $impArea\n        size: $size\n        sort: $sort\n        nPlaceId: $nPlaceId\n        realTimeRateFilter: $realTimeRateFilter\n      )\n      pkgRateCnt(\n        impArea: $impArea\n        nPlaceId: $nPlaceId\n        realTimeRateFilter: $realTimeRateFilter\n      )\n      pkgRates(\n        impArea: $impArea\n        nPlaceId: $nPlaceId\n        realTimeRateFilter: $realTimeRateFilter\n      ) {\n        userRate\n        rewards {\n          total\n          details {\n            amount\n            percent\n            title\n            type\n            url\n          }\n        }\n      }\n      cpcRates(\n        from: $from\n        impArea: $impArea\n        size: $size\n        sort: $sort\n        nPlaceId: $nPlaceId\n        realTimeRateFilter: $realTimeRateFilter\n      ) {\n        bookUrl\n        rate\n        ota {\n          code\n          npay\n        }\n      }\n      otaMinRates(\n        from: $from\n        impArea: $impArea\n        size: $size\n        sort: $sort\n        nPlaceId: $nPlaceId\n        realTimeRateFilter: $realTimeRateFilter\n      ) {\n        otaCode\n        stay {\n          id\n          isSponsored\n          ota {\n            code\n            isOfficialSite\n            npay\n          }\n          productFeatures {\n            freeCancelDeadline\n            isFreeCancel\n            isLast\n            isPayLater\n            isSecretDeal\n            roomUsageType\n          }\n          rate {\n            bookUrl\n            discounts {\n              krFestival {\n                amount\n              }\n              travelClub {\n                amount\n                grade\n                percent\n              }\n              coupon {\n                percent\n                amount\n              }\n            }\n            localRate {\n              currencyCode\n              rate\n            }\n            original\n            promotionBookUrl\n            rewards {\n              details {\n                amount\n                percent\n                title\n                type\n                url\n              }\n              total\n            }\n            userRate\n          }\n          roomFeatures {\n            bedType\n            optionType\n            roomType\n            viewType\n          }\n          roomName\n          nlog(\n            query: $query\n            checkIn: $checkIn\n            checkOut: $checkOut\n            includeTax: $includeTax\n          ) {\n            impression {\n              cssSelector\n              content\n            }\n            click {\n              eventName\n              content\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"
+  }
+bodyType: json
